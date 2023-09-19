@@ -8,12 +8,12 @@ Follow these steps to run the Decentral-Bank staking platform on your local envi
 ### Step 1: Clone the Repository
 First, clone the Decentral-Bank repository using Git Bash or download the ZIP file and navigate to the project directory:
 ```bash
-$ cd Decentral-bank/
 $ git clone git@github.com:NaveenJsr/Decentral-bank.git
 ```
 ### Step 2: Install Dependencies
 Install all the project dependencies by running the following command:
 ```bash
+$ cd Decentral-bank/
 $ npm install
 ```
 ### Step 3: Configure Ganache
