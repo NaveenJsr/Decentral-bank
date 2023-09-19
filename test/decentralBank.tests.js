@@ -65,7 +65,7 @@ contract('DecentralBank', ([owner, customer]) => {
           result = await tether.balanceOf(decentralBank.address);
           expect(result.toString()).to.equal(tokens('100'), 'decentral bank wallet balance after staking');
       
-          result = await decentralBank.isStaked(customer);
+          result = await decentralBank.isStaking(customer);
           expect(result.toString()).to.equal('true', 'customer is staking status after staking');
           
           await decentralBank.issueTokens({from: owner});
@@ -87,7 +87,7 @@ contract('DecentralBank', ([owner, customer]) => {
           result = await tether.balanceOf(decentralBank.address);
           expect(result.toString()).to.equal(tokens('0'), 'decentral bank wallet balance after unstaking');
       
-          result = await decentralBank.isStaked(customer);
+          result = await decentralBank.isStaking(customer);
           expect(result.toString()).to.equal('false', 'customer is no longer staking after unstaking');
         });
       });
